@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 220 70% 25%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 215 25% 93%;
+    --secondary-foreground: 220 30% 25%;
+
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 220 60% 95%;
+    --accent-foreground: 220 70% 25%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 220 70% 25%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 220 70% 25%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 220 70% 25%;
+    --sidebar-accent: 220 65% 32%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 220 60% 35%;
+    --sidebar-ring: 210 40% 98%;
+
+    /* Status colors */
+    --status-approved: 142 71% 45%;
+    --status-approved-foreground: 0 0% 100%;
+    --status-rejected: 0 72% 51%;
+    --status-rejected-foreground: 0 0% 100%;
+    --status-pending: 38 92% 50%;
+    --status-pending-foreground: 0 0% 100%;
+    --status-forwarded: 220 70% 50%;
+    --status-forwarded-foreground: 0 0% 100%;
+
+    /* Leave balance colors */
+    --leave-used: 34 89% 47%;
+    --leave-remaining: 0 72% 51%;
+    --leave-available: 142 71% 45%;
+
+    /* Chart */
+    --chart-1: 220 70% 25%;
+    --chart-2: 142 71% 45%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 0 72% 51%;
+    --chart-5: 262 60% 50%;
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 210 40% 96%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 215 80% 60%;
+    --primary-foreground: 220 30% 8%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 210 40% 90%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 220 30% 20%;
+    --accent-foreground: 215 80% 60%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 215 80% 60%;
+
+    --sidebar-background: 220 30% 10%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 215 80% 60%;
+    --sidebar-primary-foreground: 220 30% 8%;
+    --sidebar-accent: 220 25% 16%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 215 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .status-approved {
+    @apply bg-[hsl(var(--status-approved))] text-[hsl(var(--status-approved-foreground))];
+  }
+  .status-rejected {
+    @apply bg-[hsl(var(--status-rejected))] text-[hsl(var(--status-rejected-foreground))];
+  }
+  .status-pending {
+    @apply bg-[hsl(var(--status-pending))] text-[hsl(var(--status-pending-foreground))];
+  }
+  .status-forwarded {
+    @apply bg-[hsl(var(--status-forwarded))] text-[hsl(var(--status-forwarded-foreground))];
+  }
+}
